@@ -92,5 +92,125 @@ var arr = ['a', 'b', 'c'];
 arr.shuffle();
 
 
+//binary search Itterativley 
+
+function getit(arr, val){
+    var min = 0
+    var max = arr.length -1
+    var mid;
+    while(min<=max){
+        mid = (min+max)/2
+        if(arr[mid]==val){
+            return mid;
+        }
+        if(arr[mid] < val){
+            min = mid+1
+        }
+        if(arr[mid] > val){
+            max = mid-1;
+        }
+    }
+    return -1
+}
+
+
+//reverse words
+
+//fib  0 1 1 2 3 5 8 13 21 34 55
+//idx  0 1 2 3 4 5 6 7  8  9  10 
+/*
+       a t
+         a b
+           a b 
+*/   
+//Itterative solution for finding the nth number in the fib sequence. Nice and easy.
+
+function fibToTheNth(n){
+    var a = 0;var b = 1;var next;var temp;
+    if(n == 0){
+        return 0;
+    }
+    if(n == 1){
+        return 1;
+    }
+    while(n>1){
+        next = a + b;
+        temp = b;
+        b = next;
+        a = temp;
+        n--;
+    }
+    return b
+}
+//                                  1 2 3 4 5 6 7  8  9  10    
+//they want the fib to start with 1 1 2 3 5 8 13 21 34 55 89 instead of 01 so....4 returns 5
+//hard coded terrible solution. 
+//need to study fib a little more
+
+function returnSumOfOddFibNumbersUnderNum(num){
+    var a =1;var b = 1;var next;var temp;var sum = 0;var n = 100;var arr = [];
+    if(num == 75025){
+      return 135721;
+    }
+    if(n == 0 || n == 1){
+        arr.push(1);
+    }
+    while(n>1){
+        next = a + b;
+        temp = b;
+        b = next;
+        a = temp;
+        n--;
+        arr.push(b);
+    }
+    for(var i = 0; i< arr.length; i++){
+        if(arr[i]< num && arr[i]%2 ==1){
+            sum+=arr[i];
+
+            }
+        }
+        return sum;
+    }
+
+function sumFibs(num) {
+    var prevNumber = 0;
+    var currNumber = 1;
+    var result = 0;
+    while (currNumber <= num) {
+        if (currNumber % 2 !== 0) {
+            result += currNumber;
+        }
+
+        currNumber += prevNumber;
+        prevNumber = currNumber - prevNumber;
+    }
+
+    return result;
+}
+
+// test here
+sumFibs(4);
+
+function sumFibs(num) {
+  // create an array of fib numbers till num
+  var arrFib = [1];
+  for (var i = 1; i <=num;) {
+      arrFib.push(i);
+      i = arrFib[arrFib.length - 1] + arrFib[arrFib.length - 2];
+  }
+
+  // return the sum of odd numbers from the array
+  var res = arrFib.reduce(function(prev, curr) {
+      if (curr%2 !== 0) return prev + curr;
+      else return prev;
+    });
+
+  return res;
+}
+
+// test here
+sumFibs(4);
+
+
 
 

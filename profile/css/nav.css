@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Questrial); /*--- Nav Font --*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
 /*--- Start Navigation Style --*/
 .nav-outer {
 	width: 100%;
@@ -14,7 +17,9 @@
 nav {
 	margin-top: 0;
 	background: #505E67;
-	font-family: 'Questrial', sans-serif;
+	font-family: 'Lobster';
+	color: 	#ccebff;
+	
 }
 .nav ul {
 	overflow:hidden;
@@ -37,8 +42,9 @@ body .nav .nav-menu li a {
 	display:inline-block;
 	margin-top: 10px;
 	padding:15px 20px;
-	color: #F5F5F5;
+	color:	#ccebff;;
 	font-size: 19px;
+	letter-spacing: 0.4px;
 }
 .nav.yoga .nav-menu li.active a {
 	color: #F5F5F5;
@@ -145,7 +151,7 @@ body .nav .nav-menu li a {
 	}
 	.logo img {
 		max-width: 50px !important;
-		margin-bottom: 3px;
+		/*margin-bottom: 3px;*/
 	}
 	.nav-outer {
 		height: 21px;

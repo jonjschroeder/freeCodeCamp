@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Hind); /*--- Body Font --*/
 @import url(https://fonts.googleapis.com/css?family=Nobile); /*--- Heading Font --*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
 * {
     margin:0;
     border:0;
@@ -101,13 +103,16 @@ img {
     margin: 4% 0 4% 4%; 
 }
 .sidebar {
-    width: 26%;
+    width: 22%;
     float: right;
-    margin: 4% 4%;
+    margin: 4% 10% 0 0;
+
     
 }
 .img-circle {
     border-radius: 50%;
+    border: 15px solid #3e2b14;
+    padding: 10px 10px;
 }
 .clearfix {
     clear: both;
@@ -142,4 +147,41 @@ footer {
 footer p{
     color: #fff;
     opacity: 0.9;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+     text-transform: uppercase;
+     color: #555;
+       font-size: 150px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  margin: 0 auto;
+}
+.centered:after {
+  content:"developer";
+  position: absolute;
+  left: 8px;
+  top:8px;
+}
+.centered:after {
+  /*background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;*/
+  background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -5;
+  display: block;
+  text-shadow: none;
+}
+.containerimg {
+    position: relative;
+    text-align: center;
+    color: white;
 }
