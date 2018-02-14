@@ -210,7 +210,19 @@ function sumFibs(num) {
 
 // test here
 sumFibs(4);
+// wow this was so much easier than my previous answer.  
+function sumsFib(n){
+    var a = 0;
+    var b = 1;
+    var sum = 0;
+    while(b <= n){
+      if(b%2 == 1){
+      sum = sum + b;
+    }
+      b = b + a; 
+      a = b - a; 
+    }
+    return sum;
+}
 
-
-
-
+sumFibs(4);
